@@ -1,0 +1,26 @@
+{
+  "name": "typescript-getting-started",
+  "version": "1.0.0",
+  "description": "This is an example Firebase project for using [TypeScript](https://www.typescriptlang.org/) with [Cloud Functions for Firebase](https://firebase.google.com/products/functions).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "tsc && node ./load-test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/async": "^2.0.49",
+    "@types/request-promise-native": "^1.0.15",
+    "async": "^2.6.1",
+    "bluebird": "^3.5.1",
+    "lodash": "^4.17.10",
+    "request": "^2.87.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.23",
+    "@types/lodash": "^4.14.113"
+  }
+}
