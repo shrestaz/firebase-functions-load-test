@@ -1,0 +1,1 @@
+export const randomNumber = 0.5712102508454597;

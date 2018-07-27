@@ -30,3 +30,8 @@ export const helloWorld = functions.https.onRequest((request, response) => {
     }
     response.send(`Hello from Firebase, execution number: ${executions}!\n\n`);
 });
+
+export const testLongevity = functions.https.onRequest((request, response) => {
+    response.send('I am alive!');
+    return;
+})

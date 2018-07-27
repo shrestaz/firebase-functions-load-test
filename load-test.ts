@@ -21,7 +21,7 @@ obs.observe({ entryTypes: ['measure'] });
 // const url = 'http://localhost:5000/issues-f88d1/us-central1/helloWorld';
 const url = 'https://us-central1-issues-f88d1.cloudfunctions.net/helloWorld';
 
-function timeout(ms: number) {
+export function timeout(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
@@ -83,4 +83,4 @@ async function loadTest(iterations: number, limit = 60) {
     }
 }
 
-loadTest(10000, 50);
+// loadTest(10000, 50);

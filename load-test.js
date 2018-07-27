@@ -63,6 +63,7 @@ var url = 'https://us-central1-issues-f88d1.cloudfunctions.net/helloWorld';
 function timeout(ms) {
     return new Promise(function (resolve) { return setTimeout(resolve, ms); });
 }
+exports.timeout = timeout;
 function fakeSendRequest(iteration) {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -133,7 +134,7 @@ function loadTest(iterations, limit) {
                     sendRequest(v).then(function () { return cb(); });
                 }, function (err) {
                     if (err) {
-                        console.log("Something wen't wrong: " + err);
+                        console.log("Something went wrong: " + err);
                         newFile.close();
                     }
                     else {
@@ -143,10 +144,10 @@ function loadTest(iterations, limit) {
                 });
             }
             catch (error) {
-                console.log("Something wen't wrong: " + error.message);
+                console.log("Something went wrong: " + error.message);
             }
             return [2 /*return*/];
         });
     });
 }
-loadTest(10000, 50);
+// loadTest(10000, 50);
