@@ -46,7 +46,6 @@ var request = __importStar(require("request-promise-native"));
 var perf_hooks_1 = require("perf_hooks");
 var fs_1 = require("fs");
 var os_1 = require("os");
-// import eachLimit from 'async/eachLimit';
 var async = __importStar(require("async"));
 var newFile = fs_1.createWriteStream('./performance_log.csv', { autoClose: false });
 newFile.on('close', function () {
@@ -151,6 +150,3 @@ function loadTest(iterations, limit) {
     });
 }
 loadTest(10000, 50);
-// Call the function
-// Remember to call tsc load-test.ts
-// ANd then run with node ./load-test.js

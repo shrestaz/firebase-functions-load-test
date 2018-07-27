@@ -19,7 +19,7 @@ const obs = new PerformanceObserver((items) => {
 obs.observe({ entryTypes: ['measure'] });
 
 // const url = 'http://localhost:5000/issues-f88d1/us-central1/helloWorld';
-const url = 'https://us-central1-issues-f88d1.cloudfunctions.net/helloWorld';
+const url = 'https://us-central1-<project-id>.cloudfunctions.net/helloWorld';
 
 function timeout(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
