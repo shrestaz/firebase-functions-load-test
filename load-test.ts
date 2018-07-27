@@ -19,7 +19,7 @@ const obs = new PerformanceObserver((items) => {
 obs.observe({ entryTypes: ['measure'] });
 
 // const url = 'http://localhost:5000/issues-f88d1/us-central1/helloWorld';
-const url = 'https://us-central1-<project-id>.cloudfunctions.net/helloWorld';
+const url = 'https://us-central1-issues-f88d1.cloudfunctions.net/helloWorld';
 
 function timeout(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -71,7 +71,7 @@ async function loadTest(iterations: number, limit = 60) {
             sendRequest(v).then(() => cb());
         }, (err) => {
             if (err) {
-                console.log(`Something wen't wrong: ${err}`);
+                console.log(`Something went wrong: ${err}`);
                 newFile.close();
             } else {
                 console.log(`DONE doing load test`);
@@ -79,7 +79,7 @@ async function loadTest(iterations: number, limit = 60) {
             }
         });
     } catch (error) {
-        console.log(`Something wen't wrong: ${error.message}`);
+        console.log(`Something went wrong: ${error.message}`);
     }
 }
 
